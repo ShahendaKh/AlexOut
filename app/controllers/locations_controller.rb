@@ -21,6 +21,8 @@ class LocationsController < ApplicationController
   end
 
   def create
+    @restaurant= Restaurant.find(params[:restaurant_id])
+    @location = @restaurant.locations.create(location_params)
     @location = Location.new(location_params)
     @location.save
     respond_with(@location)
