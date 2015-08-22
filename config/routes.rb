@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :tags
+
+  resources :locations
+
   devise_for :users
   devise_for :views
   get 'welcome/Home'
