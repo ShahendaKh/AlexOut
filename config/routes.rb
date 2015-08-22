@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   devise_for :views
   get 'welcome/Home'
 
-  get 'welcome/page'
   root'welcome#Home'
 
   resources :restaurants
